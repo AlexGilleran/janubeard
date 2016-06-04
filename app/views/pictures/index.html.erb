@@ -1,6 +1,8 @@
+  <div id="container">
     <video autoplay></video>
 
-    <img class="beard-image" src="beard1.png" alt="">
+
+    <%= image_tag 'beard1.png', class: 'beard-image' %>
 
     <label for="select">Filter: </label>
     <select id="filter">
@@ -14,3 +16,4 @@
     <button id="snapshot">Beardify!</button>
 
     <canvas id="beard-canvas"></canvas>
+  </div>
