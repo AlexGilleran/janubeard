@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dpixt6n1s
+  api_key: '837628357714422'
+  api_secret: kb3sFrtbkWsn4gE_F_bHDGKkYGM
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dpixt6n1s
+  api_key: '837628357714422'
+  api_secret: kb3sFrtbkWsn4gE_F_bHDGKkYGM
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dpixt6n1s
+  api_key: '837628357714422'
+  api_secret: kb3sFrtbkWsn4gE_F_bHDGKkYGM
+  enhance_image_tag: true
+  static_image_support: false
