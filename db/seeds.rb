@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Profile.destroy_all
+p1 = Profile.create( name: 'John Doe', image_url: 'http://worldhistory.mrdonn.org/powerpoints/occupations_pirate.gif', message: "gimme money" )
