@@ -70,7 +70,7 @@ margin: -1.3em 0 2em 0;
 @media screen and (min-width: 1000px) {
 /* hack! to detect non-touch devices */
   div#links a {
-		line-height: 0.8em;
+    line-height: 0.8em;
   }
 }
 
@@ -136,7 +136,7 @@ padding: 1em 1.5em 1.3em 1.5em;
 }
 
 div#links {
-	padding: 0.5em 0 0 0;
+  padding: 0.5em 0 0 0;
 }
 
 h1 {
@@ -301,15 +301,6 @@ video {
  *  tree.
  */
 
-.beard-image {
-  width: 30%;
-  height: 100%;
-  position: relative;
-  top: -15em;
-  left: 15em;
-  /*-webkit-transform: scaleX(-1);
-  transform: scaleX(-1);*/
-}
 
 .hidden {
   display: none;
@@ -549,3 +540,16 @@ video {
 
 
 
+.beard-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  // -webkit-transform: scaleX(-1);
+  // transform: scaleX(-1);
+}
+
+.video-container {
+  position: relative;
+}

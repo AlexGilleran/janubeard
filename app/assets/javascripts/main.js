@@ -18,19 +18,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var beardImage = window.beardImage = document.querySelector('img');
   canvas.width = 640;
   canvas.height = 480;
-  beardImage.width = 192;
-  beardImage.height = 216;
+  beardImage.width = 640;
+  beardImage.height = 480;
 
   snapshotButton.onclick = function() {
     canvas.className = filterSelect.value;
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width,canvas.height);
-    canvas.getContext('2d').drawImage(beardImage, canvas.width / 2 - beardImage.width / 2 + 19, canvas.height - beardImage.height, beardImage.width, beardImage.height);
+    canvas.getContext('2d').drawImage(beardImage, 0, 0, canvas.width, canvas.height);
   };
 
   saveButton.onclick = function() {
     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
-
-
   }
 
   filterSelect.onchange = function() {
