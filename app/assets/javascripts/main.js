@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   canvas.height = 480;
   beardImage.width = 640;
   beardImage.height = 480;
+
   if(canvas && video) {
 
   $(retakeButton).hide();
@@ -33,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   nextBeardButton.onclick = function() {
     var currentImageIndex = ~~($(beardImage).attr('src').match(/\d+/));
     var nextImageIndex = (currentImageIndex+1) % 4;
-    console.log(currentImageIndex);
 
     $(beardImage).attr('src', '/assets/beard' + nextImageIndex + '.png');
   };
