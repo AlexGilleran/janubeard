@@ -15,13 +15,13 @@ body {
 .loading {
     /* Replace #333 with the background-color of your choice */
     /* Replace loading.gif with the loading image of your choice */
-    background: url('/assets/ajax-loader.gif') no-repeat 50% 50%;
+    background: asset-url('ajax-loader.gif') no-repeat 50% 50%;
 }
 
 body {
     -webkit-transition: opacity 1s ease-in;
     transition: opacity 1s ease-in;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 div#errorMsg p {

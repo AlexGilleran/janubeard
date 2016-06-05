@@ -18,21 +18,22 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.new(profile_params)
-  	responses = Cloudinary::Uploader.upload params[:profile][:image_url]
-    if @profile.save
-      render js: "window.location.href = '#{profile_path(@profile.id)}'"
-    end
-  end
+     @profile = Profile.new(profile_params)
+       response = Cloudinary::Uploader.upload params[:profile][:image_url]
+    @profile.image_url = response["url"]
+     if @profile.save
+       render js: "window.location.href = '#{profile_path(@profile.id)}'"
+     end
+   end
 
   def show
 		@profile = Profile.find params[:id]
 	end
 
 
-private
-def profile_params
-  params.require(:profile).permit(:image_url, :name, :sponsorship_url, :message)
-end
+  private
+  def profile_params
+    params.require(:profile).permit(:image_url, :name, :sponsorship_url, :message)
+  end
 
 end
