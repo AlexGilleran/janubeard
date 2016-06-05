@@ -45,6 +45,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   saveButton.onclick = function() {
     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+        $.ajax({
+      url: "/profiles",
+      method: 'POST',
+      data: {
+        profile: {
+          image_url: image
+        }
+      }
+    }).done(function(d) {
+      console.log('data :' + d);
+      console.log("success!");
+
+    }).fail(function(a){
+      console.log(a)
+    }).always(function(c){
+      console.log("ajax done")
+    });
   }
 
   var constraints = {
