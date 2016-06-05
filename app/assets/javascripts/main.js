@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var snapshotButton = document.querySelector('button#snapshot');
   var saveButton = document.querySelector('button#save-button');
   var retakeButton = document.querySelector('button#retake-button');
+  var nextBeardButton = document.querySelector('button#next-beard');
 
   // Put variables in global scope to make them available to the browser console.
   var video = window.video = document.querySelector('video');
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var shutter = new Audio();
   shutter.autoplay = false;
   shutter.src = navigator.userAgent.match(/Firefox/) ? '/assets/shutter.ogg' : '/assets/shutter.mp3';
+  if(canvas && video) {
   canvas.width = 640;
   canvas.height = 480;
   beardImage.width = 640;
@@ -28,7 +30,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(canvas).hide();
   $(saveButton).hide();
 
+  nextBeardButton.onclick = function() {
+    var currentImageIndex = ~~($(beardImage).attr('src').match(/\d+/));
+    var nextImageIndex = (currentImageIndex+1) % 4;
+    console.log(currentImageIndex);
+
+    $(beardImage).attr('src', '/assets/beard' + nextImageIndex + '.png');
+  };
+
   retakeButton.onclick = function() {
+    $(nextBeardButton).show();
+    $(beardImage).show();
     $(snapshotButton).show();
     $(video).show();
     $(saveButton).hide();
@@ -40,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width,canvas.height);
     canvas.getContext('2d').drawImage(beardImage, 0, 0, canvas.width, canvas.height);
     shutter.play();
+    $(nextBeardButton).hide();
+    $(beardImage).hide();
     $(snapshotButton).hide();
     $(video).hide();
     $(canvas).show();
@@ -91,5 +105,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     successCallback,
     errorCallback
   );
+
+  }
 
 });
