@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var shutter = new Audio();
   shutter.autoplay = false;
   shutter.src = navigator.userAgent.match(/Firefox/) ? '/assets/shutter.ogg' : '/assets/shutter.mp3';
+  if(canvas && video) {
   canvas.width = 640;
   canvas.height = 480;
   beardImage.width = 640;
   beardImage.height = 480;
-  if(canvas && video) {
 
   $(retakeButton).hide();
   $(canvas).hide();
