@@ -7,10 +7,10 @@
  */
 
 'use strict';
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
   var snapshotButton = document.querySelector('button#snapshot');
   var saveButton = document.querySelector('button#save-button');
-  var filterSelect = document.querySelector('select#filter');
+  var retakeButton = document.querySelector('button#retake-button');
 
   // Put variables in global scope to make them available to the browser console.
   var video = window.video = document.querySelector('video');
@@ -21,19 +21,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
   beardImage.width = 640;
   beardImage.height = 480;
 
+  $(retakeButton).hide();
+  $(canvas).hide();
+  $(saveButton).hide();
+
+  retakeButton.onclick = function() {
+    $(snapshotButton).show();
+    $(video).show();
+    $(saveButton).hide();
+    $(retakeButton).hide();
+    $(canvas).hide();
+  };
+
   snapshotButton.onclick = function() {
-    canvas.className = filterSelect.value;
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width,canvas.height);
     canvas.getContext('2d').drawImage(beardImage, 0, 0, canvas.width, canvas.height);
+    $(snapshotButton).hide();
+    $(video).hide();
+    $(canvas).show();
+    $(saveButton).show();
+    $(retakeButton).show();
   };
 
   saveButton.onclick = function() {
     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
   }
-
-  filterSelect.onchange = function() {
-    video.className = filterSelect.value;
-  };
 
   var constraints = {
     audio: false,
