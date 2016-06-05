@@ -1,19 +1,36 @@
+.profile-container {
+  position: relative;
+}
+
 .heading1 {
   font-family: 'Lobster', cursive, Open Sans;
-  font-size: 20px;
+  font-size: 40px;
   position: relative;
-  top: 40px;
   text-align: center;
 }
 
-.picture1 {
+.heading2 {
+  font-family: 'Lobster', cursive, Open Sans;
+  font-size: 40px;
   position: relative;
-  margin: 0 auto;
-  top: 80px;
-  display: block;
+  top: 0px;
+  text-align: center;
 }
 
-.social1 {
+.heading1 p {
+  font-family: 'Lobster', cursive, Open Sans;
+  font-size: 60px;
+}
+
+.picture1 img {
+  display: block;
   position: relative;
-  top: 120px;
+  text-align: center;
+  padding: 0 20%;
+}
+
+.social {
+  position: relative;
+  top: 20px;
+  padding: 0px 50%;
 }

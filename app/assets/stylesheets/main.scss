@@ -9,9 +9,7 @@ html, body {
     min-height: 100%;
 }
 
-body {
-  background-color: white;
-}
+
 .loading {
     /* Replace #333 with the background-color of your choice */
     /* Replace loading.gif with the loading image of your choice */
@@ -74,12 +72,12 @@ audio {
 max-width: 100%;
 }
 
-body {
-font-family: 'Roboto', sans-serif;
-margin: 0;
-padding: 1em;
-word-break: break-word;
-}
+// body {
+// font-family: 'Roboto', sans-serif;
+// margin: 0;
+// padding: 1em;
+// word-break: break-word;
+// }
 
 button {
 background-color: #d84a38;
@@ -164,7 +162,7 @@ overflow-y: scroll;
 
 img {
 border: none;
-max-width: 100%;
+// max-width: 100%;
 }
 
 input[type=radio] {
@@ -175,7 +173,7 @@ top: -1px;
 p {
 color: #444;
 font-weight: 300;
-line-height: 1.6em;
+// line-height: 1.6em;
 }
 
 p#data {
@@ -189,7 +187,7 @@ padding: 1em 0 0 0;
 
 p.borderBelow {
 border-bottom: 1px solid #aaa;
-padding: 0 0 20px 0;
+// padding: 0 0 20px 0;
 }
 
 section p:last-of-type {
@@ -351,9 +349,9 @@ max-width: 100%;
 }
 
 body {
-font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
 margin: 0;
-padding: 1em;
+// padding: 1em;
 word-break: break-word;
 }
 
@@ -436,11 +434,6 @@ when moving from the home page */
 overflow-y: scroll;
 }
 
-img {
-border: none;
-max-width: 100%;
-}
-
 input[type=radio] {
 position: relative;
 top: -1px;
@@ -449,7 +442,7 @@ top: -1px;
 p {
 color: #444;
 font-weight: 300;
-line-height: 1.6em;
+// line-height: 1.6em;
 }
 
 p#data {
