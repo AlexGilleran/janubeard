@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Put variables in global scope to make them available to the browser console.
   var video = window.video = document.querySelector('video');
   var canvas = window.canvas = document.querySelector('canvas');
-  var beardImage = window.beardImage = document.querySelector('img');
+  var beardImage = window.beardImage = document.getElementsByClassName('beard-image')[0];
   var shutter = new Audio();
 
   var shutter_ogg = $(".video-container").data('shutter-ogg');
