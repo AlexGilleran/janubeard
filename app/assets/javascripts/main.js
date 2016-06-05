@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   canvas.height = 480;
   beardImage.width = 640;
   beardImage.height = 480;
+  if(canvas && video) {
 
   $(retakeButton).hide();
   $(canvas).hide();
@@ -91,5 +92,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     successCallback,
     errorCallback
   );
+
+  }
 
 });
