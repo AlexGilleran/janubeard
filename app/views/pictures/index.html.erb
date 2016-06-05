@@ -1,5 +1,8 @@
   <div class="container">
-    <div class="video-container">
+    <div class="video-container"
+      data-shutter-ogg="<%= image_path('shutter.ogg')%>"
+      data-shutter-mp3="<%= image_path('shutter.mp3')%>">
+
         <video autoplay></video>
         <%= image_tag 'beard0.png', class: 'beard-image' %>
         <canvas id="beard-canvas"></canvas>
@@ -10,5 +13,12 @@
       <button id="retake-button">Retake</button>
       <button id="save-button">Save</button>
       <button id="next-beard">Next Beard</button>
+    </div>
+
+    <div style="display: none;" id="beards">
+        <%= image_tag("beard0.png") %>
+        <%= image_tag("beard1.png") %>
+        <%= image_tag("beard2.png") %>
+        <%= image_tag("beard3.png") %>
     </div>
   </div>
