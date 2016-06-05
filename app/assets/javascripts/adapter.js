@@ -55,8 +55,8 @@ if (typeof window === 'undefined' || !window.navigator) {
   webrtcDetectedBrowser = 'firefox';
 
   // the detected firefox version.
-  webrtcDetectedVersion =
-    parseInt(navigator.userAgent.match(/Firefox\/([0-9]+)\./)[1], 10);
+  var match = navigator.userAgent.match(/Firefox\/([0-9]+)\./);
+  webrtcDetectedVersion = match ? parseInt(match[1], 10) : 41;
 
   // the minimum firefox version still supported by adapter.
   webrtcMinimumVersion = 31;
@@ -212,8 +212,8 @@ if (typeof window === 'undefined' || !window.navigator) {
   webrtcDetectedBrowser = 'chrome';
 
   // the detected chrome version.
-  webrtcDetectedVersion =
-    parseInt(navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)[2], 10);
+  var match = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)
+  webrtcDetectedVersion = match ? parseInt(match[2], 10) : 41;
 
   // the minimum chrome version still supported by adapter.
   webrtcMinimumVersion = 38;
