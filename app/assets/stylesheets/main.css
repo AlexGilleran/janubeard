@@ -283,7 +283,7 @@ video {
       filter: sepia(1);
     }
 
-    button#snapshot, button#save-button, button#retake-button {
+    button#snapshot, button#save-button, button#retake-button, button#next-beard {
       margin: 0 10px 25px 0;
       width: 110px;
     }
