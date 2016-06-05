@@ -18,9 +18,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var canvas = window.canvas = document.querySelector('canvas');
   var beardImage = window.beardImage = document.querySelector('img');
   var shutter = new Audio();
+
+  var shutter_ogg = $(".video-container").data('shutter-ogg');
+  var shutter_mp3 = $(".video-container").data('shutter-mp3');
+  var beard_pngs = $('#beards img').map(function(i, img) {return $(img).attr('src')});
+
   shutter.autoplay = false;
-  shutter.src = navigator.userAgent.match(/Firefox/) ? '/assets/shutter.ogg' : '/assets/shutter.mp3';
-  
+  shutter.src = navigator.userAgent.match(/Firefox/) ? shutter_ogg : shutter_mp3;
   if(canvas && video) {
     canvas.width = 640;
     canvas.height = 480;
@@ -33,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     nextBeardButton.onclick = function() {
       var currentImageIndex = ~~($(beardImage).attr('src').match(/\d+/));
-      var nextImageIndex = (currentImageIndex+1) % 4;
+      var nextImageIndex = (currentImageIndex+1) % beard_pngs.size();
 
-      $(beardImage).attr('src', '/assets/beard' + nextImageIndex + '.png');
+      $(beardImage).attr('src', beard_pngs[nextImageIndex]);
     };
 
     retakeButton.onclick = function() {
