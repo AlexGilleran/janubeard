@@ -19,8 +19,9 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
+  	responses = Cloudinary::Uploader.upload params[:profile][:image_url]
     if @profile.save
-      redirect_to @profile
+      render js: "window.location.href = '#{profile_path(@profile.id)}'"
     end
   end
 

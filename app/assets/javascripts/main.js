@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var video = window.video = document.querySelector('video');
   var canvas = window.canvas = document.querySelector('canvas');
   var beardImage = window.beardImage = document.querySelector('img');
+  var shutter = new Audio();
+  shutter.autoplay = false;
+  shutter.src = navigator.userAgent.match(/Firefox/) ? '/assets/shutter.ogg' : '/assets/shutter.mp3';
   canvas.width = 640;
   canvas.height = 480;
   beardImage.width = 640;
   beardImage.height = 480;
+  if(canvas && video) {
 
   $(retakeButton).hide();
   $(canvas).hide();
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   snapshotButton.onclick = function() {
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width,canvas.height);
     canvas.getContext('2d').drawImage(beardImage, 0, 0, canvas.width, canvas.height);
+    shutter.play();
     $(nextBeardButton).hide();
     $(beardImage).hide();
     $(snapshotButton).hide();
@@ -58,6 +63,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   saveButton.onclick = function() {
     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+    $( "body" ).addClass( "loading" );
+    $(".container").hide()
+        $.ajax({
+      url: "/profiles",
+      method: 'POST',
+      data: {
+        profile: {
+          image_url: image
+        }
+      }
+    }).done(function(d) {
+      console.log('data :' + d);
+      console.log("success!");
+      $( "html" ).removeClass( "loading" );
+
+    }).fail(function(a){
+      console.log(a)
+    }).always(function(c){
+      console.log("ajax done")
+    });
   }
 
   var constraints = {
@@ -80,5 +105,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     successCallback,
     errorCallback
   );
+
+  }
 
 });
