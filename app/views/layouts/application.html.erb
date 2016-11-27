@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Beardify</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="userpage" content="Your amazing photo yo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -13,11 +14,27 @@
   <![endif]-->
 </head>
 <body>
-<div class="nav-bar">
-<a href="#"><%= image_tag 'nav_logo.png', class: 'nav-icons' %></a></li>
-</div>
+  <div class="nav-bar">
+    <!-- Hamburger menu -->
+    <a class="burger-menu" href="">
+      <div class="burger-icon"> <!-- burger icon strips -->
+        <div class="burger-strips"></div>
+        <div class="burger-strips"></div>
+        <div class="burger-strips"></div>
+      </div>  <!-- end burger icon strips -->
 
-<%= yield %>
+      <!-- text 'MENU'' for burger menu not included, UX decision -->
+      <!-- <p>MENU</p> -->
+    </a> <!-- end Hamburger menu -->
+    <a href="http://janubeard.herokuapp.com/#">
+      <%= image_tag 'nav_logo.png', class: 'nav-logo' %>
+    </a>
+
+    <a href="" target="_blank"><%= image_tag 'facebook_red.png', alt: "facebook", class: 'nav-icons nav-logo' %></a>
+
+  </div> <!-- end nav-bar -->
+
+  <%= yield %>
 
 </body>
 </html>

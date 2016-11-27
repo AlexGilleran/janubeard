@@ -72,15 +72,10 @@ audio {
 max-width: 100%;
 }
 
-// body {
-// font-family: 'Roboto', sans-serif;
-// margin: 0;
-// padding: 1em;
-// word-break: break-word;
-// }
-
 button {
-background-color: #d84a38;
+/* hack color rgba alpha to transparency to have clear background-color */
+background-color: rgba(0, 0, 0, 0);
+
 border: none;
 border-radius: 2px;
 color: white;
@@ -128,7 +123,8 @@ div#links {
 }
 
 h1 {
-border-bottom: 1px solid #ccc;
+/*Not sure why there is a h1 bottom border. Commented out for now */
+/*border-bottom: 1px solid #ccc;*/
 font-family: 'Roboto', sans-serif;
 font-weight: 500;
 margin: 0 0 0.8em 0;
@@ -146,7 +142,8 @@ margin: 0 0 0.8em 0;
 }
 
 h3 {
-border-top: 1px solid #eee;
+/* unknown reason by h3 border was included. */
+/*border-top: 1px solid #eee;*/
 color: #666;
 font-weight: 500;
 margin: 20px 0 10px 0;
@@ -162,7 +159,7 @@ overflow-y: scroll;
 
 img {
 border: none;
-// max-width: 100%;
+/* max-width: 100%; */
 }
 
 input[type=radio] {
@@ -173,7 +170,7 @@ top: -1px;
 p {
 color: #444;
 font-weight: 300;
-// line-height: 1.6em;
+/* line-height: 1.6em; */
 }
 
 p#data {
@@ -187,7 +184,7 @@ padding: 1em 0 0 0;
 
 p.borderBelow {
 border-bottom: 1px solid #aaa;
-// padding: 0 0 20px 0;
+/* padding: 0 0 20px 0; */
 }
 
 section p:last-of-type {
@@ -272,8 +269,7 @@ video {
       filter: sepia(1);
     }
 
-    button#snapshot, button#save-button, button#retake-button, button#next-beard {
-      margin: 0 10px 25px 0;
+    button#snapshot, button#save-button, button#retake-button, button#next-beard, button#prev-beard  {
       width: 110px;
     }
 
@@ -352,12 +348,12 @@ max-width: 100%;
 body {
 font-family: 'Open Sans', sans-serif;
 margin: 0;
-// padding: 1em;
-word-break: break-word;
+/* padding: 1em; */
+word-break: normal;;
 }
 
 button {
-background-color: #d84a38;
+/*background-color: #d84a38;*/
 border: none;
 border-radius: 2px;
 color: white;
@@ -405,7 +401,8 @@ div#links {
 }
 
 h1 {
-border-bottom: 1px solid #ccc;
+/*Not sure why there is a h1 bottom border. Commented out for now */
+/*border-bottom: 1px solid #ccc;*/
 font-family: 'Roboto', sans-serif;
 font-weight: 500;
 margin: 0 0 0.8em 0;
@@ -414,19 +411,23 @@ padding: 0 0 0.2em 0;
 
 h2 {
 color: #444;
-font-size: 1em;
+font-size: 1.3em;
 font-weight: 500;
 line-height: 1.2em;
 margin: 0 0 0.8em 0;
 }
 
 h3 {
-border-top: 1px solid #eee;
+/* unknown reason by h3 border was included. */
+/*border-top: 1px solid #eee;*/
 color: #666;
 font-weight: 500;
 margin: 20px 0 10px 0;
 padding: 10px 0 0 0;
 white-space: nowrap;
+/* temporary style, until cursive font is included*/
+font-size: 33px;
+font-style: oblique;
 }
 
 html {
@@ -443,7 +444,7 @@ top: -1px;
 p {
 color: #444;
 font-weight: 300;
-// line-height: 1.6em;
+/* line-height: 1.6em; */
 }
 
 p#data {
@@ -499,7 +500,7 @@ video {
   width: 100%;
 }
 
-.button-container {
+.bottom-bar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -535,11 +536,110 @@ video {
   left: 0;
   width: 100%;
   height: auto;
-  // -webkit-transform: scaleX(-1);
-  // transform: scaleX(-1);
+  /* -webkit-transform: scaleX(-1);  */
+  /* transform: scaleX(-1); */
 }
 
 .video-container {
   position: relative;
   transform: scaleX(-1);
+}
+
+/***********************************************/
+/* Styles for Janubeard intro page, by Ron Lui */
+/***********************************************/
+
+/* Flexbox to centre the entire column of content */
+#janu-container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* hardcodes the janu-container width, not ideal solution */
+  width: 32em;
+}
+
+#janu-container > img#janu-logo {
+  /* the janubeard logo is hardcoded to be smaller than the janu-container width, not ideal solution */
+  width: 17em;
+}
+
+#janu-container > img {
+  /* all images in the coloumn hardcoded to be the same as janu-container width, not ideal solution */
+  width: 32em;
+}
+
+#beardify-link-section {
+  margin: 40px auto;
+}
+
+#beardify-link {
+  background-color: rgba(190, 37, 38, 1);
+  border-radius: 5px;
+  color: white;
+  font-size: 35px;
+  padding: 15px 70px;
+  text-decoration: none;
+}
+
+#black-section-divider {
+  background-color: black;
+  text-align: center;
+  width: inherit;
+}
+
+#black-section-divider p {
+  color: white;
+  font-size: 1.5em;
+}
+
+#donation-block {
+  background-color: rgb(232, 230, 230);;
+  border-radius: 10px;
+  padding: 20px 10px;
+  /* hardcoded div width */
+  width: 30em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* container for the donation amount option buttons */
+#donation-options {
+  width: 480px;
+  margin: 10px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-button {
+  background-color: rgb(190, 37, 38);;
+  border-radius: 5px;
+  padding: 11px 29px;
+}
+
+#spread-word-banner a img {
+  height: 30px;
+  margin: 5px;
+}
+
+#action-shots-section {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto 30px auto;
+  /* hardcoded div width */
+  width: 30em;
+}
+
+#action-shots-gallery {
+  display: flex;
+  justify-content: space-between;
+  /* hardcoded div width */
+  width: 20em;
+}
+
+#action-shots-gallery img {
+  height: 95px;
+  width: 95px;
 }
