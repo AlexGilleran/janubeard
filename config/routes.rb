@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root :to => 'pictures#index'
+  get '/homepage' => 'homepage#index'
 
   resources :pictures
   resources :profiles
