@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://janubeard.herokuapp.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Beardify</title>
+  <meta name="userpage" content="Your amazing photo yo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./Beardify_files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" media="all" href="./Beardify_files/application.css">
+  <link rel="stylesheet" media="all" href="./Beardify_files/main.css">
+  <link rel="stylesheet" media="all" href="./Beardify_files/navbar.css">
+  <link rel="stylesheet" media="all" href="./Beardify_files/normalize.css">
+  <link rel="stylesheet" media="all" href="./Beardify_files/profile.css">
+  <script src="./Beardify_files/application.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="mJNDmiFzas4hJa3d6rzDRGgtT0YaCFBU2s+iUEl0Qqwa42u92fPEIB072EHqWstKgu/d0syIy+lR9CfjBNftvw==">
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="nav-bar">
+    <!-- Hamburger menu -->
+    <a class="burger-menu" href="">
+      <div class="burger-icon"> <!-- burger icon strips -->
+        <div class="burger-strips"></div>
+        <div class="burger-strips"></div>
+        <div class="burger-strips"></div>
+      </div>  <!-- end burger icon strips -->
+
+      <!-- text 'MENU'' for burger menu not included, UX decision -->
+      <!-- <p>MENU</p> -->
+    </a> <!-- end Hamburger menu -->
+    <a href="http://janubeard.herokuapp.com/#"><img class="nav-logo" src="./Beardify_files/nav_logo.png" alt="Nav logo a74569ef98458c1dffa25faebfde6e6590b844012a7274841f8413f9a53e7743"></a>
+
+    <a href="" target="_blank"><img class="nav-icons" src="images/facebook_red.png" alt="facebook"></a>
+
+  </div> <!-- end nav-bar -->
+
+  <div class="container">
+
+    <div class="video-container" data-shutter-ogg="/assets/shutter-d4496ec6110f24f7bccb4b1511e2265852581e2f0ee76f7867478a6ef0b1c62c.ogg" data-shutter-mp3="/assets/shutter-560cbb41a18779cdf0787761722a0a8035202795ac066b914cda05532f32f1c5.mp3">
+
+        <video autoplay=""></video>
+        <img class="beard-image" src="./Beardify_files/beard0.png" alt="Beard0 bcfb1f46ba8349ac059ead2e8bd3dbc080e753d683d7300283888469e513df56" width="640" height="480">
+        <canvas id="beard-canvas" width="640" height="480" style="display: none;"></canvas>
+    </div> <!-- end video-container -->
+
+    <div style="display: none;" id="beards">
+        <img src="./Beardify_files/beard0.png" alt="Beard0 bcfb1f46ba8349ac059ead2e8bd3dbc080e753d683d7300283888469e513df56">
+        <img src="./Beardify_files/beard1.png" alt="Beard1 02fc9e9563344ff823cb2685dc4e5afcdbdf3169270dba58db73a86db3ad0ba8">
+        <img src="./Beardify_files/beard2.png" alt="Beard2 8b4a37cc7d3b2901b49244eb3f9c56fc5c54ab456f915818c1bb479debb4f482">
+        <img src="./Beardify_files/beard3.png" alt="Beard3 2ddcc31f382aba4a5e5fb7cb71e318ff69ebd7ae54881b36f687c2c4930884b0">
+        <img src="./Beardify_files/beard4.png" alt="Beard4 268beedf82d8062efc6faaee2d02011ddda6da10bf10e25c86c6277f4f49535a">
+        <img src="./Beardify_files/beard5.png" alt="Beard5 c3dc0f07577c77032c86b4ee107b139dfd97899b4a46b6bcf673274128b116d8">
+    </div> <!-- end beards -->
+
+  </div> <!-- end container -->
+
+  <div class="bottom-bar">
+    <button id="prev-beard"><img src="images/arrow_right.png" alt="previous beard"></button>
+    <button id="snapshot"><img src="images/camera_white.png" alt="take camera snapshot"></button>
+    <button id="retake-button" style="display: none;">Retake</button>
+    <div id="share-banner" style="display: none;"> <!-- share-banner div holds all icons -->
+      <p id="share-beard">Share</p>
+      <a id="share-facebook" href="" target="_blank"><img class="share-icons" src="images/facebook_white.png" alt="share on facebook"></a>
+    </div> <!-- end share-banner div -->
+    <button id="save-button" style="display: none;">Save</button>
+    <button id="next-beard"><img src="images/arrow_left.png" alt="next beard"></button>
+  </div> <!-- end button-container -->
+
+</body>
+
+</html>

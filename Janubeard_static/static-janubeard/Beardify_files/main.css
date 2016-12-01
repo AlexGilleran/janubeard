@@ -1,3 +1,4 @@
+
 html {
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
@@ -24,6 +25,7 @@ body {
 div#errorMsg p {
   color: #F00;
 }
+
 
 a {
 color: #6fa8dc;

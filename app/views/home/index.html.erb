@@ -1,0 +1,58 @@
+<div id="janu-container">
+    <!-- Hero logo and intro heading -->
+    <%= image_tag 'logo_transparent.png', id: 'janu-logo', alt: 'janubeard logo'%>
+    <h1>Beardify yourself!<br />Get hairy with our Beard Generator!</h1>
+
+    <!-- Intro paragraphs -->
+    <p>Become bewhiskered, stubbly, shaggy, bushy, woolly, furry, fleecy and bristly - all in the name of <span>raising money for kids suffering from cancer.</span></p>
+    <p>Janubeard is the world’s largest beard harmonisation event, with one unifying factor: respect and nurture of the beard for the month of January.</p>
+
+    <!-- Beardify button link -->
+    <!-- Unknown reason why this button is hidden. Link created instead -->
+    <div id="beardify-link-section">
+      <a id="beardify-link" href="/pictures">Beard me up!</a>
+    </div>
+
+    <div id="black-section-divider"><p>Here is how we help...</p></div>
+
+    <!-- Synopsis of child Lulu-->
+    <%= image_tag 'lulu.jpg', alt: 'photo of Lulu, a young child who was diagnosed with cancer'%>
+    <p>This little beauty is Lulu. At 8-months old she was diagnosed with a type of childhood cancer called Neuroblastoma.</p>
+    <p>Lulu is now 6 years old, but like so many other kids with cancer, Lulu needs more research. <a href="http://bit.ly/Lulus_Story" target="_blank">Read Lulu’s story</a></p>
+
+    <!-- Donation section block -->
+    <div id="donation-block">
+      <h2>Even a small amount makes a big difference!</h2>
+      <p>Donate now to help kids with cancer</p>
+      <div id="donation-options">
+        <button class="donation-button">$10</button>
+        <button class="donation-button">$25</button>
+        <button class="donation-button">$200</button>
+        <button class="donation-button">$500</button>
+        <button class="donation-button">$8,000</button>
+      </div>
+      <h3>Spread the word</h3>
+      <p>to help kids with cancer...</p>
+      <div id="spread-word-banner">
+        <a href="https://www.facebook.com/Janubeard/" target="_blank"><%= image_tag 'facebook_red.png', class: 'spread-word-icons', alt: 'janubeard facebook'%></a>
+        <a href="https://twitter.com/janubeard" target="_blank"><%= image_tag 'twitter_red.png', class: 'spread-word-icons', alt: 'janubeard twitter'%></a>
+        <a href="https://www.instagram.com/janubeard/" target="_blank"><%= image_tag 'instagram_red.png', class: 'spread-word-icons', alt: 'janubeard instagram'%></a>
+        <!-- linkedin icon hidden until needed -->
+        <!-- <a href="" target="_blank"><%= image_tag 'linkedin.png', class: 'spread-word-icons', alt: 'linkedin'%></a> -->
+      </div>
+    </div>
+
+    <!-- Beardify action shots section block -->
+    <div id="action-shots-section">
+      <h3>Beard up for the kids!</h3>
+      <div id="action-shots-gallery">
+        <%= image_tag 'p1.jpg', alt: 'bearded human'%>
+        <%= image_tag 'p2.jpg', alt: 'bearded human'%>
+        <%= image_tag 'p3.jpg', alt: 'bearded human'%>
+      </div>
+    </div>
+  </div> <!-- end container -->
+
+</body>
+
+</html>

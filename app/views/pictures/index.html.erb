@@ -1,28 +1,43 @@
-  <div class="container">
-    <div class="heading2">
-      <p>beardometer</p>
-    </div>
-    <div class="video-container"
-      data-shutter-ogg="<%= image_path('shutter.ogg')%>"
-      data-shutter-mp3="<%= image_path('shutter.mp3')%>">
-
-        <video autoplay></video>
-        <%= image_tag 'beard0.png', class: 'beard-image' %>
-        <canvas id="beard-canvas"></canvas>
-    </div>
-
-    <div class="button-container">
-      <button id="snapshot">Beardify</button>
-      <button id="retake-button">Retake</button>
-      <button id="save-button">Save</button>
-      <button id="next-beard">Next Beard</button>
-    </div>
-
-    <div style="display: none;" id="beards">
-        <%= image_tag("beard0.png") %>
-        <%= image_tag("beard1.png") %>
-        <%= image_tag("beard2.png") %>
-        <%= image_tag("beard3.png") %>
-        <%= image_tag("beard4.png") %>
-    </div>
+<div class="container">
+  <div class="heading2">
+    <p>beardometer</p>
   </div>
+  <div class="video-container"
+    data-shutter-ogg="<%= image_path('shutter.ogg')%>"
+    data-shutter-mp3="<%= image_path('shutter.mp3')%>">
+
+      <video autoplay></video>
+      <%= image_tag 'beard0.png', class: 'beard-image' %>
+      <canvas id="beard-canvas"></canvas>
+  </div>
+
+  <!-- <div class="button-container">
+    <button id="snapshot">Beardify</button>
+    <button id="retake-button">Retake</button>
+    <button id="save-button">Save</button>
+    <button id="next-beard">Next Beard</button>
+  </div> -->
+
+  <div style="display: none;" id="beards">
+      <%= image_tag("beard0.png") %>
+      <%= image_tag("beard1.png") %>
+      <%= image_tag("beard2.png") %>
+      <%= image_tag("beard3.png") %>
+      <%= image_tag("beard4.png") %>
+  </div>
+</div>
+
+<div class="bottom-bar">
+  <button id="prev-beard"><%= image_tag 'arrow_right.png' %></button>
+  <button id="snapshot"><%= image_tag 'camera_white.png' %></button>
+  <button id="retake-button" style="display: none;">Retake</button>
+  <div id="share-banner" style="display: none;">
+  <!-- share-banner div holds all icons -->
+    <p id="share-beard">Share</p>
+    <a id="share-facebook" href="" target="_blank"><%= image_tag 'facebook-white.png', class: "share-icons" %></a>
+  </div>
+  <!-- end share-banner div -->
+  <button id="save-button" style="display: none;">Save</button>
+  <button id="next-beard"><%= image_tag 'arrow_left.png' %></button>
+</div>
+<!-- end button-container -->

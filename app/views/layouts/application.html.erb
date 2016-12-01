@@ -13,9 +13,25 @@
   <![endif]-->
 </head>
 <body>
-<div class="nav-bar">
+<!-- <div class="nav-bar">
 <a href="#"><%= image_tag 'nav_logo.png', class: 'nav-icons' %></a></li>
-</div>
+</div> -->
+
+<div class="nav-bar">
+  <!-- Hamburger menu -->
+  <a class="burger-menu" href="">
+    <div class="burger-icon">
+      <div class="burger-strips"></div>
+      <div class="burger-strips"></div>
+      <div class="burger-strips"></div>
+    </div>
+  </a>
+  <!-- end Hamburger menu -->
+  <a href="http://janubeard.herokuapp.com/#"><%= image_tag 'nav_logo.png', class: 'nav-logo' %></a>
+
+  <a href="" target="_blank"><%= image_tag 'facebook_red.png', class: 'nav-icons' %></a>
+
+</div> <!-- end nav-bar -->
 
 <%= yield %>
 

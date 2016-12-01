@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'pictures#index'
+  root :to => 'home#index'
 
   resources :pictures
   resources :profiles

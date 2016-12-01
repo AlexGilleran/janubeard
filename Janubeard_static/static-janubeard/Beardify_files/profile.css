@@ -22,43 +22,12 @@
   font-size: 60px;
 }
 
-.picture1 {
-  width: 640px;
-  margin: 0 auto;
-}
-
 .picture1 img {
   display: block;
   position: relative;
   text-align: center;
-  width: 640px;
+  padding: 0 20%;
 }
-
-@media (max-width: 768px) {
-  .picture1 {
-    width: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  .picture1 img {
-    width: 480px;
-  }
-}
-
-
-@media (max-width: 520px) {
-  .picture1 img {
-    width: 300px;
-  }
-}
-
-@media (max-width: 520px) {
-  .picture1 {
-    width: 300px;
-  }
-}
-
 
 .social {
   position: relative;
