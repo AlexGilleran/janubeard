@@ -3,14 +3,14 @@
 }
 
 .heading1 {
-  font-family: 'Lobster', cursive, Open Sans;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 40px;
   position: relative;
   text-align: center;
 }
 
 .heading2 {
-  font-family: 'Lobster', cursive, Open Sans;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 40px;
   position: relative;
   top: 0px;
@@ -18,7 +18,7 @@
 }
 
 .heading1 p {
-  font-family: 'Lobster', cursive, Open Sans;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 60px;
 }
 
