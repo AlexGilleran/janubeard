@@ -615,7 +615,16 @@ video {
 .donation-button {
   background-color: rgb(190, 37, 38);;
   border-radius: 5px;
+  color: #fff;
+  font-weight: normal;
   padding: 11px 29px;
+
+  &:hover {
+    color: #fff;
+    font-style: normal;
+    background-color: #cf402f;
+    text-decoration: none;
+  }
 }
 
 #spread-word-banner a img {
