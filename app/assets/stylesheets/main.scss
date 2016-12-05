@@ -569,17 +569,20 @@ video {
   width: 32em;
 }
 
-#beardify-link-section {
+#donation-options, #beardify-link-section {
   margin: 40px auto;
 }
 
-#beardify-link {
+#beardify-link, .donation-button {
   background-color: rgba(190, 37, 38, 1);
   border-radius: 5px;
   color: white;
   font-size: 35px;
   padding: 15px 70px;
   text-decoration: none;
+  &:hover {
+    background-color: #cf402f;
+  }
 }
 
 #black-section-divider {
@@ -602,29 +605,6 @@ video {
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-
-/* container for the donation amount option buttons */
-#donation-options {
-  width: 480px;
-  margin: 10px 0 30px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.donation-button {
-  background-color: rgb(190, 37, 38);;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: normal;
-  padding: 11px 29px;
-
-  &:hover {
-    color: #fff;
-    font-style: normal;
-    background-color: #cf402f;
-    text-decoration: none;
-  }
 }
 
 #spread-word-banner a img {
