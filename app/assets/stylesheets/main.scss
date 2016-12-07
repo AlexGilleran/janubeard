@@ -1,4 +1,3 @@
-
 html {
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
@@ -167,59 +166,6 @@ position: relative;
 top: -1px;
 }
 
-p {
-color: #444;
-font-weight: 300;
-/* line-height: 1.6em; */
-}
-
-p#data {
-border-top: 1px dotted #666;
-font-family: Courier New, monospace;
-line-height: 1.3em;
-max-height: 1000px;
-overflow-y: auto;
-padding: 1em 0 0 0;
-}
-
-p.borderBelow {
-border-bottom: 1px solid #aaa;
-/* padding: 0 0 20px 0; */
-}
-
-section p:last-of-type {
-margin: 0;
-}
-
-section {
-  border-bottom: 1px solid #eee;
-  margin: 0 0 30px 0;
-  padding: 0 0 20px 0;
-}
-
-section:last-of-type {
-  border-bottom: none;
-  padding: 0 0 1em 0;
-}
-
-select {
-  margin: 0 1em 1em 0;
-  position: relative;
-  top: -1px;
-}
-
-h1 span {
-  white-space: nowrap;
-}
-
-strong {
-  font-weight: 500;
-}
-
-textarea {
-  font-family: 'Roboto', sans-serif;
-}
-
 video {
   background: #222;
   margin: 0 0 20px 0;
@@ -248,34 +194,34 @@ video {
   }
 }
 
-    .none {
-      -webkit-filter: none;
-      filter: none;
-    }
-    .blur {
-      -webkit-filter: blur(3px);
-      filter: blur(3px);
-    }
-    .grayscale {
-      -webkit-filter: grayscale(1);
-      filter: grayscale(1);
-    }
-    .invert {
-      -webkit-filter: invert(1);
-      filter: invert(1);
-    }
-    .sepia {
-      -webkit-filter: sepia(1);
-      filter: sepia(1);
-    }
+.none {
+  -webkit-filter: none;
+  filter: none;
+}
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+.grayscale {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.invert {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.sepia {
+  -webkit-filter: sepia(1);
+  filter: sepia(1);
+}
 
-    button#snapshot, button#save-button, button#retake-button, button#next-beard, button#prev-beard  {
-      width: 110px;
-    }
+button#snapshot, button#save-button, button#retake-button, button#next-beard, button#prev-beard  {
+  width: 110px;
+}
 
-    video {
-      object-fit: cover;
-    }
+video {
+  object-fit: cover;
+}
 
 
 /*
@@ -556,17 +502,22 @@ video {
   flex-flow: column;
   align-items: center;
   /* hardcodes the janu-container width, not ideal solution */
-  width: 32em;
+  width: 33em;
+  max-width: 100%;
 }
 
 #janu-container > img#janu-logo {
   /* the janubeard logo is hardcoded to be smaller than the janu-container width, not ideal solution */
-  width: 17em;
+  width: 50%;
 }
 
 #janu-container > img {
   /* all images in the coloumn hardcoded to be the same as janu-container width, not ideal solution */
-  width: 32em;
+  width: 100%;
+}
+
+#janu-container > p {
+  padding: 0 .5em;
 }
 
 #donation-options, #beardify-link-section {
@@ -581,7 +532,12 @@ video {
   padding: 15px 70px;
   text-decoration: none;
   &:hover {
+    text-decoration: none;
+    color: white;
     background-color: #cf402f;
+  }
+  @media screen and (max-width: 320px) {
+    padding: 15px 30px;
   }
 }
 
@@ -592,16 +548,21 @@ video {
 }
 
 #black-section-divider p {
+  margin: 24px 0;
   color: white;
   font-size: 1.5em;
 }
 
 #donation-block {
-  background-color: rgb(232, 230, 230);;
+  h2 {
+    text-align: center
+  }
+  background-color: rgb(232, 230, 230);
   border-radius: 10px;
   padding: 20px 10px;
   /* hardcoded div width */
   width: 30em;
+  max-width: 95%;
   display: flex;
   flex-flow: column;
   align-items: center;
