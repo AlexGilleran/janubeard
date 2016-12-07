@@ -89,3 +89,8 @@
 .share-icons {
   width: 30px;
 }
+
+.social > div {
+    float: left;
+    margin: 0 3px;
+}
