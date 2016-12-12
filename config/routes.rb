@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-  root :to => 'pictures#index'
-  get '/homepage' => 'homepage#index'
+  root :to => 'homepage#index'
 
   resources :pictures
   resources :profiles
 
   post '/pictures' => 'pictures#create'
+  get '/beardometer' => 'pictures#index'
 
+  get '/.well-known/acme-challenge/:id' => 'homepage#letsencrypt'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
