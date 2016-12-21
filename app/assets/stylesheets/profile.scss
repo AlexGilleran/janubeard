@@ -1,0 +1,37 @@
+.profile-container {
+  position: relative;
+
+  .heading {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+
+    p {
+      font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+      font-size: 60px;
+    }
+  }
+
+  .picture img {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .social {
+    position: relative;
+    top: 20px;
+    padding: 0;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .bottom-bar #beardify-link {
+    img {
+      vertical-align: bottom;
+      height: 50px
+    }
+  }
+}
