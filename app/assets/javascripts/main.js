@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var saveButton = document.querySelector('button#save-button');
   var retakeButton = document.querySelector('button#retake-button');
   var nextBeardButton = document.querySelector('button#next-beard');
+  var prevBeardButton = document.querySelector('button#prev-beard');
 
   // Put variables in global scope to make them available to the browser console.
   var video = window.video = document.querySelector('video');
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 
     retakeButton.onclick = function() {
+      $(prevBeardButton).show();
       $(nextBeardButton).show();
       $(beardImage).show();
       $(snapshotButton).show();
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width,canvas.height);
       canvas.getContext('2d').drawImage(beardImage, 0, 0, canvas.width, canvas.height);
       shutter.play();
+      $(prevBeardButton).hide();
       $(nextBeardButton).hide();
       $(beardImage).hide();
       $(snapshotButton).hide();
@@ -91,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var constraints = {
       audio: false,
-      video: true
+      video: { width: 640, height: 480 }
     };
 
     function successCallback(stream) {

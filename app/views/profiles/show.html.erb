@@ -1,11 +1,20 @@
+<% content_for :head do %>
+  <meta property="og:url"           content="<%= profile_url(@profile) %>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="The Beardometer Has Spoken." />
+	<meta property="og:description"   content="I've bearded up for kids with cancer." />
+	<meta property="og:image"         content="<%= @profile.image_url %>" />
+<% end %>
+
 <div class="profile-container">
 <div class="heading">
   <p>The Beardometer Has Spoken.</p>
 </div>
-</header>
+
 <div class="picture">
   <%= image_tag @profile.image_url %>
 
+  <p>Share this beard & help raise funds for kids with cancer www.janubeard.org</p>
   <div class="social">
   <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>

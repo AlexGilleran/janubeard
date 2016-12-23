@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="userpage" content="Your amazing photo yo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= yield :head %>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -26,7 +27,7 @@
       <!-- text 'MENU'' for burger menu not included, UX decision -->
       <!-- <p>MENU</p> -->
     </a> <!-- end Hamburger menu -->
-    <a href="/homepage">
+    <a href="/">
       <%= image_tag 'nav_logo.png', class: 'nav-logo' %>
     </a>
 

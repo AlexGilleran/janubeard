@@ -13,19 +13,27 @@
     }
   }
 
-  .picture img {
-    display: block;
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-  }
+  .picture {
+    img {
+      display: block;
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+    }
 
-  .social {
-    position: relative;
-    top: 20px;
-    padding: 0;
-    width: 200px;
-    margin: 0 auto;
+    p {
+      font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .social {
+      position: relative;
+      top: 20px;
+      padding: 0;
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 
   .bottom-bar #beardify-link {
