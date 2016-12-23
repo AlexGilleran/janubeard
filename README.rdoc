@@ -1,28 +1,35 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Janubeard is simple web application which allows a user to take photos of themselves
+with a beard overlayed on the photo.  Afterwards the user can share the photo with
+their friends via facebook or twitter.
 
-Things you may want to cover:
+Getting started:
+---------------
 
-* Ruby version
+Cloudinary:
+This project uses cloudinary to store images and You will need to add it's secret
+keys in a `.env` file in your project root:
+```
+export CLOUDINARY_KEY=[your cloudinary api key]
+export CLOUDINARY_NAME=[your cloudinary name]
+export CLOUDINARY_SECRET=[your cloudinary secret]
+```
 
-* System dependencies
+Postgres:
+This project uses postgresql to store data about the photos taken.  You will need
+to be running Postrgres locally to develop against this app.
 
-* Configuration
+On OSX with postgres installed via homebrew this command will work: `postgres -D /usr/local/var/postgres`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To setup your database you will want to do the following
+- `rake db:create`
+- `rake db:migrate`
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Deploying:
+----------
+
+In order to deploy you will want to get the rights to deploy to `janubeard.herokuapp.com`.
+Link heroku to your local repo:  `heroku git:remote janubeard`
+And whenever you want to deploy: `git push heroku master`
