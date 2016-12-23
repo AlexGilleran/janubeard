@@ -4,10 +4,9 @@ Janubeard is simple web application which allows a user to take photos of themse
 with a beard overlayed on the photo.  Afterwards the user can share the photo with
 their friends via facebook or twitter.
 
-Getting started:
----------------
+=== Getting started:
 
-Cloudinary:
+==== Cloudinary:
 This project uses cloudinary to store images and You will need to add it's secret
 keys in a `.env` file in your project root:
 ```
@@ -16,7 +15,7 @@ export CLOUDINARY_NAME=[your cloudinary name]
 export CLOUDINARY_SECRET=[your cloudinary secret]
 ```
 
-Postgres:
+==== Postgres:
 This project uses postgresql to store data about the photos taken.  You will need
 to be running Postrgres locally to develop against this app.
 
@@ -27,8 +26,7 @@ To setup your database you will want to do the following
 - `rake db:migrate`
 
 
-Deploying:
-----------
+=== Deploying:
 
 In order to deploy you will want to get the rights to deploy to `janubeard.herokuapp.com`.
 Link heroku to your local repo:  `heroku git:remote janubeard`
